@@ -1,0 +1,6 @@
+{
+  "name": "CVT STORE | A Loja Mais Completa da Cidade e Região",
+  "description": "Loja de moda masculina e casual em Igarassu - PE. Camisas, Polos, Calças, Bermudas e Bonés com atendimento direto no WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

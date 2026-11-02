@@ -1,0 +1,86 @@
+import { Testimonial, StoryHighlight } from '../types';
+
+export const STORY_HIGHLIGHTS: StoryHighlight[] = [
+  {
+    id: 'h1',
+    title: 'Clientes',
+    thumbnail: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    handle: '@mateus_iga',
+    caption: 'Look 100% CVT STORE pro final de semana. Caimento surreal!',
+  },
+  {
+    id: 'h2',
+    title: 'Entregas',
+    thumbnail: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+    handle: '@lucas.barbosa9',
+    caption: 'Pedi pelo WhatsApp de manhã e à tarde já estava na minha casa em Igarassu!',
+  },
+  {
+    id: 'h3',
+    title: 'Feedback',
+    thumbnail: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+    handle: '@tiagosilva_pe',
+    caption: 'Melhor polo e bermuda que já comprei na região. Tecido diferenciado!',
+  },
+  {
+    id: 'h4',
+    title: 'Looks CVT',
+    thumbnail: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
+    handle: '@guilherme.lima',
+    caption: 'Calça jeans slim perfeita, não aperta nada e veste muito bem.',
+  },
+  {
+    id: 'h5',
+    title: 'Loja Física',
+    thumbnail: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=400&q=80',
+    handle: '@store_cvt',
+    caption: 'Espaço climatizado na Rua Luciana Paiva de Souza, 392 - Igarassu.',
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'test-1',
+    name: 'Carlos Eduardo',
+    location: 'Igarassu - PE (Centro)',
+    comment: 'A CVT STORE é sem dúvidas a loja mais completa da cidade! Fui atendido no WhatsApp em menos de 2 minutos, tiraram todas as minhas dúvidas sobre o tamanho da calça e a entrega foi super rápida. Roupas de altíssimo padrão.',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80',
+    productBought: 'Calça Jeans Slim + Polo Piquet',
+    date: 'Ontem',
+    verified: true,
+  },
+  {
+    id: 'test-2',
+    name: 'Vinicius Menezes',
+    location: 'Igarassu - PE (Cruz de Rebouças)',
+    comment: 'Camisa pesada de qualidade impecável, não deforma após lavar e o caimento no corpo é perfeito. Sempre que preciso de look pra sair, compro direto na CVT!',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
+    productBought: 'Camisa Masculina Premium Heavyweight',
+    date: 'Há 3 dias',
+    verified: true,
+  },
+  {
+    id: 'test-3',
+    name: 'Rafael Albuquerque',
+    location: 'Abreu e Lima - PE',
+    comment: 'O atendimento pelo WhatsApp é diferenciado demais. Mandei meu peso e altura e acertaram em cheio no tamanho da bermuda e do boné snapback. Recomendo de olhos fechados!',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&q=80',
+    productBought: 'Bermuda Sarja Casual + Boné Snapback',
+    date: 'Há 1 semana',
+    verified: true,
+  },
+  {
+    id: 'test-4',
+    name: 'Matheus Henrique',
+    location: 'Igarassu - PE',
+    comment: 'Comprei 3 polos pra trabalhar e sair. Tecido muito confortável, fresco e corte moderno. A loja física é show e pelo zap respondem na hora!',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80',
+    productBought: 'Kit 3 Polos Piquet CVT',
+    date: 'Há 2 semanas',
+    verified: true,
+  },
+];
