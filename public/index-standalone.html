@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVT STORE | A Loja Mais Completa da Cidade e Região</title>
+  <meta name="description" content="CVT STORE - A loja mais completa da cidade e região em Igarassu - PE. Camisas, Polos, Calças, Bermudas e Bonés com pedido direto no WhatsApp.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FACC15',
+              dark: '#09090b',
+            }
+          },
+          fontFamily: {
+            athletic: ['"Barlow Condensed"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Barlow Condensed & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Athletic smooth transitions */
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans selection:bg-yellow-400 selection:text-black pb-16 md:pb-0 overflow-x-hidden">
+
+  <!-- TOP TICKER BAR -->
+  <div class="bg-yellow-400 text-black text-xs font-black py-1.5 px-4 uppercase tracking-wider font-athletic border-b border-yellow-500/50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+        <span class="inline-block w-2 h-2 bg-black rotate-45 shrink-0"></span>
+        <span class="font-black">A loja mais completa da cidade e região</span>
+        <span class="hidden sm:inline font-bold text-zinc-900">• Revendedor Autorizado DLZ & Mioche • Igarassu - PE</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0 text-xs font-bold font-sans">
+        <a href="https://instagram.com/store_cvt" target="_blank" rel="noopener noreferrer" class="hidden md:inline hover:opacity-80">
+          @store_cvt
+        </a>
+        <span class="hidden md:inline text-black/30">/</span>
+        <a href="https://wa.me/5581994651854" target="_blank" rel="noopener noreferrer" class="font-bold hover:underline">
+          (81) 99465-1854
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER COM FUNDO DE CONTRASTE SÓLIDO (PRETO) E LOGO SEM CÍRCULO -->
+  <header class="sticky top-0 z-40 bg-black text-white border-b-2 border-zinc-900 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- LOGO OFICIAL COM PERSONAGEM (JOHNNY BRAVO EM SMOKING) SEM CÍRCULO PRETO -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <img src="/assets/aistudio/cvt_logo_trimmed.png" alt="CVT STORE Logo Oficial" class="h-11 sm:h-13 w-auto object-contain transition-transform group-hover:scale-105">
+          <div class="hidden sm:flex flex-col border-l border-zinc-800 pl-2.5">
+            <span class="text-[9px] uppercase tracking-[0.25em] text-yellow-400 font-black font-athletic">Oficial</span>
+            <span class="text-[8px] text-zinc-400 uppercase tracking-widest font-bold">Igarassu • PE</span>
+          </div>
+        </a>
+
+        <!-- MENU MINIMALISTA: Início, Produtos, Contato -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-black uppercase tracking-wider text-zinc-300 font-athletic">
+          <a href="#inicio" class="hover:text-yellow-400 transition-colors py-2 border-b-2 border-transparent hover:border-yellow-400">Início</a>
+          <a href="#produtos" class="hover:text-yellow-400 transition-colors py-2 border-b-2 border-transparent hover:border-yellow-400">Produtos</a>
+          <a href="#marcas" class="hover:text-yellow-400 transition-colors py-2 border-b-2 border-transparent hover:border-yellow-400 text-yellow-400">Marcas (DLZ & Mioche)</a>
+          <a href="#depoimentos" class="hover:text-yellow-400 transition-colors py-2 border-b-2 border-transparent hover:border-yellow-400">Clientes</a>
+          <a href="#contato" class="hover:text-yellow-400 transition-colors py-2 border-b-2 border-transparent hover:border-yellow-400">Contato</a>
+        </nav>
+
+        <!-- BOTÃO DIRETO WHATSAPP & HAMBÚRGUER -->
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20CVT%20STORE!" target="_blank" rel="noopener noreferrer" class="min-h-[44px] flex items-center justify-center bg-yellow-400 hover:bg-yellow-300 text-black font-black px-4 py-2 uppercase tracking-wider text-xs font-athletic transition-all active:scale-95 shadow-md">
+            <span>WhatsApp</span>
+          </a>
+          <button id="menu-btn" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center bg-zinc-900 border border-zinc-800 text-white p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE HAMBURGER DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex justify-end">
+    <div class="w-full max-w-sm bg-zinc-950 h-full p-6 flex flex-col justify-between border-l border-zinc-800">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+          <span class="text-2xl font-black font-athletic uppercase">CVT <span class="text-yellow-400">STORE</span></span>
+          <button id="close-drawer" class="text-zinc-400 hover:text-white p-2 text-2xl font-bold">&times;</button>
+        </div>
+        <div class="flex flex-col space-y-4 pt-6 font-athletic uppercase text-lg font-black">
+          <a href="#inicio" class="drawer-link hover:text-yellow-400 py-2">Início</a>
+          <a href="#produtos" class="drawer-link hover:text-yellow-400 py-2">Produtos & Vitrine</a>
+          <a href="#marcas" class="drawer-link text-yellow-400 py-2">Marcas (DLZ & Mioche)</a>
+          <a href="#depoimentos" class="drawer-link hover:text-yellow-400 py-2">Clientes Satisfeitos</a>
+          <a href="#contato" class="drawer-link hover:text-yellow-400 py-2">Contato & Loja Física</a>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-zinc-800 space-y-3">
+        <a href="https://wa.me/5581994651854" target="_blank" class="w-full block text-center bg-yellow-400 text-black font-black py-3 uppercase font-athletic text-sm">
+          Falar no WhatsApp ((81) 99465-1854)
+        </a>
+        <p class="text-xs text-zinc-400 text-center font-sans">Rua Luciana Paiva de Souza, 392 - Igarassu - PE</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO PRINCIPAL (HERO SECTION) COM LOGO OFICIAL (SEM CARA DE FUNDO) -->
+  <section id="inicio" class="relative bg-black text-white overflow-hidden border-b border-zinc-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 sm:py-16 lg:py-20 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-yellow-400 text-black px-3 py-1 font-black text-xs uppercase tracking-widest font-athletic">
+            <span>COLEÇÃO OFICIAL 2026</span>
+            <span class="w-1.5 h-1.5 bg-black rotate-45"></span>
+            <span>DLZ & MIOCHE</span>
+          </div>
+
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white leading-[0.98] font-athletic">
+              A loja mais <br class="hidden sm:inline">
+              <span class="text-yellow-400">completa</span> da cidade <br>
+              e região.
+            </h1>
+            <p class="text-sm sm:text-base md:text-lg text-zinc-300 font-normal leading-relaxed pt-2 max-w-xl">
+              Referência em moda masculina em Igarassu e região. Revendedor autorizado das consagradas marcas <strong class="text-white">DLZ</strong> e <strong class="text-white">Mioche</strong>, além da linha autoral <strong class="text-yellow-400">CVT Collection</strong>: Camisas, Polos, Calças, Bermudas e Bonés com caimento impecável.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-3">
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20CVT%20STORE%20e%20quero%20comprar%20no%20WhatsApp%20agora!" target="_blank" rel="noopener noreferrer" class="min-h-[48px] inline-flex items-center justify-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-base sm:text-lg px-8 py-4 uppercase tracking-wider font-athletic transition-all active:scale-98 shadow-xl shadow-yellow-400/20 text-center">
+              <span>Comprar no WhatsApp</span>
+              &rarr;
+            </a>
+            <a href="#produtos" class="min-h-[48px] inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-white text-white hover:text-black font-black text-sm sm:text-base px-6 py-4 uppercase tracking-wider border-2 border-zinc-800 hover:border-white font-athletic transition-all text-center">
+              <span>Explorar Vitrine</span>
+            </a>
+          </div>
+
+          <p class="text-xs text-zinc-400 pt-1 font-medium flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+            Atendimento Rápido via WhatsApp: <strong class="text-white">(81) 99465-1854</strong>
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative bg-zinc-950 border-2 border-zinc-800 p-6 shadow-2xl">
+            <div class="flex items-center justify-between pb-3 border-b border-zinc-800 mb-3">
+              <span class="text-xs font-black uppercase text-yellow-400 tracking-widest font-athletic">IDENTIDADE OFICIAL</span>
+              <span class="text-[10px] text-zinc-400 font-bold uppercase font-athletic">Igarassu • PE</span>
+            </div>
+            <div class="w-full aspect-[16/10] bg-black p-4 flex items-center justify-center border border-zinc-800">
+              <img src="/assets/aistudio/cvt_logo_trimmed.png" alt="CVT STORE Logo Oficial" class="w-full h-full object-contain">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS AUTORIZADAS (DLZ & MIOCHE) -->
+  <section id="marcas" class="py-16 bg-black text-white border-b border-zinc-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="bg-yellow-400 text-black px-3 py-1 text-xs font-black uppercase tracking-widest font-athletic">PROCEDÊNCIA COMPROVADA</span>
+        <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-athletic mt-3">Marcas Autorizadas na <span class="text-yellow-400">CVT STORE</span></h2>
+        <p class="text-sm text-zinc-400 mt-2">Peças 100% originais com nota e procedência garantida em Igarassu.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 border border-zinc-800 p-6 flex flex-col justify-between hover:border-yellow-400 transition-colors">
+          <div>
+            <span class="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 bg-yellow-400 text-black font-athletic">REVENDEDOR AUTORIZADO</span>
+            <h3 class="text-3xl font-black uppercase font-athletic text-white mt-3">DLZ</h3>
+            <p class="text-xs text-zinc-400 mt-2">Jeans com elastano de alta tecnologia, polos diferenciadas e caimento perfeito.</p>
+          </div>
+          <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Gostaria%20de%20ver%20as%20pe%C3%A7as%20da%20DLZ%20na%20CVT%20STORE!" target="_blank" class="mt-6 text-xs text-yellow-400 font-black uppercase tracking-wider font-athletic hover:underline">Ver catálogo DLZ &rarr;</a>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 p-6 flex flex-col justify-between hover:border-yellow-400 transition-colors">
+          <div>
+            <span class="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 bg-yellow-400 text-black font-athletic">REVENDEDOR AUTORIZADO</span>
+            <h3 class="text-3xl font-black uppercase font-athletic text-white mt-3">MIOCHE</h3>
+            <p class="text-xs text-zinc-400 mt-2">Elegância e conforto casual contemporâneo, polos piquet e bermudas sarja nobres.</p>
+          </div>
+          <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Gostaria%20de%20ver%20as%20pe%C3%A7as%20da%20Mioche%20na%20CVT%20STORE!" target="_blank" class="mt-6 text-xs text-yellow-400 font-black uppercase tracking-wider font-athletic hover:underline">Ver catálogo Mioche &rarr;</a>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 p-6 flex flex-col justify-between hover:border-yellow-400 transition-colors">
+          <div>
+            <span class="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 bg-zinc-800 text-yellow-400 border border-yellow-400 font-athletic">LINHA EXCLUSIVA</span>
+            <h3 class="text-3xl font-black uppercase font-athletic text-white mt-3">CVT COLLECTION</h3>
+            <p class="text-xs text-zinc-400 mt-2">Camisas pesadas, bonés snapback bordados e bermudas casuais com identidade própria.</p>
+          </div>
+          <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Gostaria%20de%20ver%20as%20pe%C3%A7as%20da%20linha%20CVT%20Collection!" target="_blank" class="mt-6 text-xs text-yellow-400 font-black uppercase tracking-wider font-athletic hover:underline">Ver CVT Collection &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VITRINE DE PRODUTOS (GRID DINÂMICO 1, 2, 3, 4 COLUNAS) -->
+  <section id="produtos" class="py-16 bg-zinc-950 text-white border-b border-zinc-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-black uppercase text-yellow-400 tracking-widest font-athletic">VITRINE OFICIAL CVT STORE</span>
+        <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-athletic mt-1">Catálogo de Produtos</h2>
+        <p class="text-xs sm:text-sm text-zinc-400 mt-2 font-sans">
+          Clique no botão "Pedir no WhatsApp" em qualquer produto para enviar a mensagem pronta com o pedido para <strong class="text-white">+55 81 99465-1854</strong>.
+        </p>
+      </div>
+
+      <!-- GRID DINÂMICO RESPONSIVO: 1 coluna no celular, 2 em tablet pequeno, 3 em tablet médio, 4 no desktop -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- PRODUTO 1 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Camisa DLZ Heavy Cotton" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">DLZ OFICIAL</span>
+            <span class="absolute top-2 right-2 bg-yellow-400 text-black text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">MAIS VENDIDA</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Camisas</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Camisa DLZ Premium Heavy Cotton</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">100% algodão penteado fio 30.1 com caimento alinhado no corpo.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 89,90</span>
+                <p class="text-[10px] text-zinc-400">ou 3x de R$ 29,97 sem juros</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Camisa%20DLZ%20Premium%20Heavy%20Cotton%20(R$%2089,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- PRODUTO 2 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1625910513413-562b7e51c8a7?auto=format&fit=crop&w=800&q=80" alt="Polo Mioche Classic Fit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">MIOCHE</span>
+            <span class="absolute top-2 right-2 bg-yellow-400 text-black text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">DESTAQUE</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Polos</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Camisa Polo Mioche Piquet Classic</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">Piquet encorpado de algodão e elastano com acabamento nobre.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 119,90</span>
+                <p class="text-[10px] text-zinc-400">ou 3x de R$ 39,97 sem juros</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Camisa%20Polo%20Mioche%20Piquet%20Classic%20(R$%20119,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- PRODUTO 3 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=800&q=80" alt="Calça Jeans DLZ Slim Flex" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">DLZ OFICIAL</span>
+            <span class="absolute top-2 right-2 bg-yellow-400 text-black text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">CAMPEÃ</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Calças</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Calça Jeans DLZ Slim Fit Flex</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">Elastano de alta recuperação, corte moderno e flexibilidade total.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 169,90</span>
+                <p class="text-[10px] text-zinc-400">ou 3x de R$ 56,63 sem juros</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Cal%C3%A7a%20Jeans%20DLZ%20Slim%20Fit%20Flex%20(R$%20169,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- PRODUTO 4 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=800&q=80" alt="Bermuda Sarja DLZ Stretch" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">DLZ OFICIAL</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Bermudas</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Bermuda Sarja Casual DLZ Stretch</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">Corte na medida no joelho, sarja peletizada super confortável.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 119,90</span>
+                <p class="text-[10px] text-zinc-400">ou 3x de R$ 39,97 sem juros</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Bermuda%20Sarja%20Casual%20DLZ%20Stretch%20(R$%20119,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- PRODUTO 5 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80" alt="Boné Snapback Aba Curva CVT" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">CVT EXCLUSIVO</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Bonés</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Boné Snapback Aba Curva CVT</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">Bordado frontal em alta resolução, fecho regulável resistente.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 69,90</span>
+                <p class="text-[10px] text-zinc-400">à vista ou no cartão</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Bon%C3%A9%20Snapback%20Aba%20Curva%20CVT%20(R$%2069,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- PRODUTO 6 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=800&q=80" alt="Boné Trucker com Telinha DLZ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">DLZ OFICIAL</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Bonés</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Boné Trucker com Telinha DLZ</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">Ventilação traseira máxima, modelagem estruturada de alto padrão.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 64,90</span>
+                <p class="text-[10px] text-zinc-400">à vista ou no cartão</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Bon%C3%A9%20Trucker%20com%20Telinha%20DLZ%20(R$%2064,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- PRODUTO 7 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=800&q=80" alt="Calça Sarja Chino Mioche" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">MIOCHE</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Calças</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Calça Sarja Chino Casual Mioche</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">Sarja nobre peletizada com bolsos faca e caimento sob medida.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 159,90</span>
+                <p class="text-[10px] text-zinc-400">ou 3x de R$ 53,30 sem juros</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Cal%C3%A7a%20Sarja%20Chino%20Casual%20Mioche%20(R$%20159,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- PRODUTO 8 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-yellow-400 transition-colors flex flex-col justify-between">
+          <div class="relative aspect-[3/4] bg-zinc-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1560243563-062bfc001d68?auto=format&fit=crop&w=800&q=80" alt="Bermuda Moletom CVT Confort" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2 left-2 bg-black text-yellow-400 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider font-athletic">CVT EXCLUSIVO</span>
+          </div>
+          <div class="p-4 space-y-3">
+            <div>
+              <span class="text-[10px] text-zinc-400 uppercase font-athletic font-bold">Bermudas</span>
+              <h3 class="text-base font-bold text-white line-clamp-1">Bermuda Moletom Casual Confort</h3>
+              <p class="text-xs text-zinc-400 line-clamp-2 mt-1">Cós anatômico ajustável e bolsos com zíper metálico.</p>
+            </div>
+            <div class="pt-2 border-t border-zinc-800 flex items-baseline justify-between">
+              <div>
+                <span class="text-2xl font-black text-white font-athletic">R$ 99,90</span>
+                <p class="text-[10px] text-zinc-400">ou 3x de R$ 33,30 sem juros</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Bermuda%20Moletom%20Casual%20Confort%20(R$%2099,90)%20que%20vi%20na%20CVT%20STORE!" target="_blank" class="w-full min-h-[44px] flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-black text-xs uppercase tracking-wider font-athletic active:scale-98">
+              <span>Pedir no WhatsApp</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE CONFIANÇA (PROVA SOCIAL COM DESTAQUE CLIENTES INSTAGRAM) -->
+  <section id="depoimentos" class="py-16 bg-black text-white border-b border-zinc-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-black uppercase text-yellow-400 tracking-widest font-athletic">COMMUNITY • @STORE_CVT</span>
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-athletic mt-1">Destaque "Clientes"</h2>
+          <p class="text-sm text-zinc-400 mt-1">Fotos reais e feedbacks de quem compra e confia na CVT STORE em Igarassu e região.</p>
+        </div>
+        <a href="https://instagram.com/store_cvt" target="_blank" rel="noopener noreferrer" class="text-xs font-black uppercase tracking-wider text-yellow-400 font-athletic hover:underline">
+          Seguir no Instagram (@store_cvt) &rarr;
+        </a>
+      </div>
+
+      <!-- Feed / Carrossel Touch-Friendly -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 mb-10">
+        <div class="relative aspect-[4/5] bg-zinc-900 overflow-hidden border border-zinc-800">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Cliente CVT" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 right-2.5 text-xs">
+            <p class="font-black text-white font-athletic uppercase">@mateus_iga</p>
+            <p class="text-[11px] text-zinc-300">"Look completo DLZ pro final de semana!"</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/5] bg-zinc-900 overflow-hidden border border-zinc-800">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Cliente CVT" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 right-2.5 text-xs">
+            <p class="font-black text-white font-athletic uppercase">@lucas.barbosa9</p>
+            <p class="text-[11px] text-zinc-300">"Pedi de manhã e recebi à tarde em Igarassu!"</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/5] bg-zinc-900 overflow-hidden border border-zinc-800">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Cliente CVT" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 right-2.5 text-xs">
+            <p class="font-black text-white font-athletic uppercase">@tiagosilva_pe</p>
+            <p class="text-[11px] text-zinc-300">"Melhor polo e bermuda da região."</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/5] bg-zinc-900 overflow-hidden border border-zinc-800">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Cliente CVT" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 right-2.5 text-xs">
+            <p class="font-black text-white font-athletic uppercase">@guilherme.lima</p>
+            <p class="text-[11px] text-zinc-300">"Jeans slim veste sob medida."</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/5] bg-zinc-900 overflow-hidden border border-zinc-800">
+          <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80" alt="Cliente CVT" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-2.5 left-2.5 right-2.5 text-xs">
+            <p class="font-black text-white font-athletic uppercase">@carlos_reboucas</p>
+            <p class="text-[11px] text-zinc-300">"Atendimento VIP no zap e loja top."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimentos com estrelas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-zinc-900 border border-zinc-800 p-5">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <p class="font-bold text-white text-sm">Carlos Eduardo</p>
+              <p class="text-xs text-zinc-400">Igarassu - PE (Centro)</p>
+            </div>
+            <div class="text-yellow-400 text-sm">★★★★★</div>
+          </div>
+          <p class="text-xs text-zinc-300 italic">"A CVT STORE é a loja mais completa da cidade! Fui atendido no WhatsApp em menos de 2 minutos, tiraram todas as dúvidas de tamanho e a entrega foi no mesmo dia."</p>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 p-5">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <p class="font-bold text-white text-sm">Vinicius Menezes</p>
+              <p class="text-xs text-zinc-400">Igarassu - PE (Cruz de Rebouças)</p>
+            </div>
+            <div class="text-yellow-400 text-sm">★★★★★</div>
+          </div>
+          <p class="text-xs text-zinc-300 italic">"Peças DLZ e Mioche originais com preço justo. Comprei calça jeans e polo e o caimento ficou perfeito. Recomendo de olhos fechados!"</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOJA FÍSICA E CONTATO -->
+  <section id="contato" class="py-16 bg-zinc-950 text-white border-b border-zinc-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="bg-yellow-400 text-black px-3 py-1 text-xs font-black uppercase tracking-widest font-athletic">LOJA FÍSICA EM IGARASSU</span>
+            <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white font-athletic">Venha conhecer a <span class="text-yellow-400">CVT STORE</span></h2>
+            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+              Ambiente moderno, climatizado e atendimento personalizado para provar no corpo as coleções da DLZ, Mioche e CVT.
+            </p>
+            <div class="p-4 bg-black border border-zinc-800 space-y-1">
+              <span class="text-[10px] text-yellow-400 uppercase font-black font-athletic tracking-wider">Endereço Oficial</span>
+              <p class="text-base sm:text-lg font-black text-white font-athletic">Rua Luciana Paiva de Souza, Nº 392, Igarassu - PE</p>
+              <p class="text-xs text-zinc-400">Horário: Segunda a Sábado das 09h às 19h</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="https://wa.me/5581994651854" target="_blank" class="min-h-[48px] inline-flex items-center justify-center bg-yellow-400 text-black font-black px-6 py-3 uppercase tracking-wider font-athletic">
+                Chamar no WhatsApp ((81) 99465-1854)
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Rua+Luciana+Paiva+de+Souza,+392,+Igarassu+-+PE" target="_blank" class="min-h-[48px] inline-flex items-center justify-center bg-black hover:bg-zinc-800 text-white font-black px-6 py-3 uppercase tracking-wider font-athletic border border-zinc-800">
+                Traçar Rota no Google Maps
+              </a>
+            </div>
+          </div>
+
+          <div class="aspect-[4/3] bg-black border border-zinc-800 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" alt="Loja física CVT STORE" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 text-xs font-bold text-white font-athletic uppercase">
+              Espaço Oficial • Igarassu - PE
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ (FOOTER) -->
+  <footer class="bg-black text-white py-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-zinc-900">
+        <div class="space-y-3">
+          <img src="/assets/aistudio/cvt_logo_trimmed.png" alt="CVT STORE Logo Oficial" class="h-12 w-auto object-contain">
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            <strong class="text-white">A loja mais completa da cidade e região.</strong> Revendedor autorizado das marcas DLZ e Mioche em Igarassu - PE.
+          </p>
+        </div>
+        <div class="space-y-2 text-xs font-athletic uppercase">
+          <h4 class="text-yellow-400 font-black">Navegação</h4>
+          <p><a href="#inicio" class="text-zinc-400 hover:text-white">Início</a></p>
+          <p><a href="#produtos" class="text-zinc-400 hover:text-white">Produtos</a></p>
+          <p><a href="#marcas" class="text-zinc-400 hover:text-white">Marcas (DLZ & Mioche)</a></p>
+          <p><a href="#depoimentos" class="text-zinc-400 hover:text-white">Clientes</a></p>
+          <p><a href="#contato" class="text-zinc-400 hover:text-white">Contato & Endereço</a></p>
+        </div>
+        <div class="space-y-2 text-xs font-sans">
+          <h4 class="text-yellow-400 font-black font-athletic uppercase">Contato Direto</h4>
+          <p class="text-zinc-300"><strong>Endereço:</strong> Rua Luciana Paiva de Souza, Nº 392, Igarassu - PE</p>
+          <p class="text-zinc-300"><strong>WhatsApp:</strong> <a href="https://wa.me/5581994651854" class="text-yellow-400 font-bold">(81) 99465-1854</a></p>
+          <p class="text-zinc-300"><strong>Instagram:</strong> <a href="https://instagram.com/store_cvt" target="_blank" class="text-zinc-400 hover:text-white">@store_cvt</a></p>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+        <p>&copy; 2026 CVT STORE. Todos os direitos reservados. Igarassu - PE.</p>
+        <p class="mt-2 sm:mt-0 font-athletic uppercase font-bold text-zinc-400">Pix • Cartão até 12x • Dinheiro</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CTA -->
+  <a href="https://wa.me/5581994651854?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20CVT%20STORE!" target="_blank" class="fixed bottom-6 right-6 z-50 bg-yellow-400 hover:bg-yellow-300 text-black font-black p-3.5 sm:px-4 sm:py-3.5 rounded-full shadow-2xl flex items-center gap-2 font-athletic uppercase tracking-wider text-xs active:scale-95">
+    <svg class="w-5 h-5 fill-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- SCRIPT VANILLA PARA O MENU MOBILE -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-drawer');
+    const drawer = document.getElementById('mobile-drawer');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
+
+    function toggleDrawer(show) {
+      if (show) {
+        drawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        drawer.classList.add('hidden');
+        document.body.style.overflow = 'unset';
+      }
+    }
+
+    if (menuBtn) menuBtn.addEventListener('click', () => toggleDrawer(true));
+    if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+    if (drawer) drawer.addEventListener('click', (e) => {
+      if (e.target === drawer) toggleDrawer(false);
+    });
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', () => toggleDrawer(false));
+    });
+  </script>
+
+</body>
+</html>
