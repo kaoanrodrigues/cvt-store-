@@ -151,7 +151,6 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
-<<<<<<< HEAD
             <a
               href="#admin"
               className="text-zinc-500 hover:text-yellow-400 transition-colors uppercase font-athletic text-[11px]"
@@ -159,8 +158,6 @@ export const Footer: React.FC = () => {
               Área Administrativa
             </a>
             <span className="text-zinc-700">•</span>
-=======
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
             <p className="text-center md:text-right font-sans">
               &copy; {new Date().getFullYear()} CVT STORE. Todos os direitos reservados.
             </p>

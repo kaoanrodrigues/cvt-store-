@@ -1,7 +1,6 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-<<<<<<< HEAD
 import {defineConfig, Plugin} from 'vite';
 import { handleApiRequest } from './server/apiRouter.ts';
 
@@ -41,16 +40,6 @@ export default defineConfig(() => {
     resolve: {
       alias: {
         '@': path.resolve(import.meta.dirname, '.'),
-=======
-import {defineConfig} from 'vite';
-
-export default defineConfig(() => {
-  return {
-    plugins: [react(), tailwindcss()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
       },
     },
     server: {

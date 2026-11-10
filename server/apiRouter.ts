@@ -470,7 +470,7 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
 
     // 10. DASHBOARD KPI
     if (pathname === '/api/dashboard/stats' && method === 'GET') {
-      const products = getAllProducts();
+      const products = getAllProducts().filter((p): p is NonNullable<typeof p> => Boolean(p));
       const totalStock = products.reduce((acc, p) => acc + (p.stock || 0), 0);
       const criticalCount = products.filter((p) => p.stock < 5).length;
 

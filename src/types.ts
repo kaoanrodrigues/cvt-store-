@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 export type CategoryId = 'todas' | 'promocoes' | 'camisas' | 'polos' | 'calcas' | 'bermudas' | 'bones';
-=======
-export type CategoryId = 'todas' | 'camisas' | 'polos' | 'calcas' | 'bermudas' | 'bones';
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
 
 export interface Brand {
   id: string;
@@ -11,7 +7,6 @@ export interface Brand {
   badge: string;
 }
 
-<<<<<<< HEAD
 export interface ProductImage {
   id?: number | string;
   productId?: string;
@@ -30,17 +25,12 @@ export interface ProductVariant {
 export interface Product {
   id: string;
   sku: string;
-=======
-export interface Product {
-  id: string;
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
   name: string;
   brand?: string;
   category: 'camisas' | 'polos' | 'calcas' | 'bermudas' | 'bones';
   categoryLabel: string;
   price: number;
   originalPrice?: number;
-<<<<<<< HEAD
   promoPrice?: number; // Preço promocional com desconto
   isPromo?: boolean; // Define se o item está ativo na aba de promoções
   costPrice?: number;
@@ -57,14 +47,6 @@ export interface Product {
   description: string;
   isPopular?: boolean;
   createdAt?: string;
-=======
-  image: string;
-  badge?: string;
-  sizes: string[];
-  colors?: { name: string; hex: string }[];
-  description: string;
-  isPopular?: boolean;
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
 }
 
 export interface CartItem {
@@ -73,7 +55,6 @@ export interface CartItem {
   quantity: number;
 }
 
-<<<<<<< HEAD
 export interface SaleItem {
   id?: number | string;
   saleId?: string;
@@ -109,8 +90,6 @@ export interface AuthState {
   token: string | null;
 }
 
-=======
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
 export interface Testimonial {
   id: string;
   name: string;
@@ -130,7 +109,6 @@ export interface StoryHighlight {
   handle: string;
   caption: string;
 }
-<<<<<<< HEAD
 
 export type AdminTab = 'dashboard' | 'products' | 'inventory' | 'ai-insights' | 'login';
 
@@ -161,5 +139,3 @@ export interface AiRecommendation {
 
 export type ExportFormat = 'csv' | 'excel' | 'pdf' | 'json';
 export type ExportDataset = 'consolidated' | 'sales' | 'inventory' | 'ai-insights';
-=======
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7

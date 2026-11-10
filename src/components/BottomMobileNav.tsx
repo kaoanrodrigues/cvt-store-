@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Home, Shirt, Flame, ShoppingBag, MessageCircle } from 'lucide-react';
-=======
-import { Home, Shirt, Award, ShoppingBag, MessageCircle } from 'lucide-react';
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
 import { buildGeneralWhatsAppLink } from '../data/products';
 
 interface BottomMobileNavProps {
@@ -28,11 +24,7 @@ export const BottomMobileNav: React.FC<BottomMobileNavProps> = ({
   };
 
   return (
-<<<<<<< HEAD
     <nav
-=======
-    <nav 
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
       aria-label="Navegação Mobile Inferior"
       className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-md border-t border-zinc-800 px-3 py-2 pb-safe"
     >
@@ -70,7 +62,6 @@ export const BottomMobileNav: React.FC<BottomMobileNavProps> = ({
           <MessageCircle className="w-6 h-6 fill-black" />
         </a>
 
-<<<<<<< HEAD
         {/* Promoções */}
         <button
           data-testid="bottom-nav-promos"
@@ -85,16 +76,6 @@ export const BottomMobileNav: React.FC<BottomMobileNavProps> = ({
           </div>
           <span className="text-[10px] font-bold uppercase tracking-wider font-athletic mt-1 text-yellow-400">
             Ofertas
-=======
-        {/* Marcas */}
-        <button
-          onClick={() => scrollTo('marcas')}
-          className="flex flex-col items-center justify-center min-w-[54px] py-1 text-zinc-400 hover:text-yellow-400 active:text-yellow-400 transition-colors"
-        >
-          <Award className="w-5 h-5" />
-          <span className="text-[10px] font-bold uppercase tracking-wider font-athletic mt-1">
-            Marcas
->>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
           </span>
         </button>
 
