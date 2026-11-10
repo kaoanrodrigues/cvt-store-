@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { MessageCircle, Menu, X, ShoppingBag, Instagram, LayoutDashboard, ChevronRight, Flame } from 'lucide-react';
 import { WHATSAPP_DISPLAY, INSTAGRAM_HANDLE, INSTAGRAM_URL, buildGeneralWhatsAppLink } from '../data/products';
 import { CvtLogo } from './CvtLogo';
 import { useStore } from '../data/storeContext';
+=======
+import { MessageCircle, Menu, X, ShoppingBag, MapPin, Instagram, Search, ChevronRight } from 'lucide-react';
+import { WHATSAPP_DISPLAY, INSTAGRAM_HANDLE, INSTAGRAM_URL, buildGeneralWhatsAppLink } from '../data/products';
+import { CvtLogo } from './CvtLogo';
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
 
 interface HeaderProps {
   cartCount: number;
   onOpenCart: () => void;
   onSelectCategory: (categoryId: any) => void;
+<<<<<<< HEAD
   onOpenAdmin?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectCategory, onOpenAdmin }) => {
   const { setCurrentView } = useStore();
+=======
+}
+
+export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectCategory }) => {
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -37,6 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
     }
   };
 
+<<<<<<< HEAD
   const handleAdminClick = () => {
     setMobileMenuOpen(false);
     if (onOpenAdmin) {
@@ -46,6 +59,8 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
     }
   };
 
+=======
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
   return (
     <>
       <header className="sticky top-0 z-40 bg-black text-white border-b-2 border-zinc-900 shadow-2xl">
@@ -85,13 +100,21 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             
+<<<<<<< HEAD
             {/* Official Logo */}
+=======
+            {/* Official Logo with Mascot Character */}
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
             <a href="#" className="focus:outline-none">
               <CvtLogo />
             </a>
 
             {/* Desktop Minimalist Menu: Início, Produtos, Contato (plus Marcas) */}
+<<<<<<< HEAD
             <nav className="hidden md:flex items-center gap-7 text-xs font-black uppercase tracking-wider text-zinc-300 font-athletic">
+=======
+            <nav className="hidden md:flex items-center gap-8 text-xs font-black uppercase tracking-wider text-zinc-300 font-athletic">
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
               <button
                 onClick={() => handleNavClick('inicio')}
                 className="hover:text-yellow-400 transition-colors cursor-pointer py-2 border-b-2 border-transparent hover:border-yellow-400"
@@ -105,6 +128,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
                 Produtos
               </button>
               <button
+<<<<<<< HEAD
                 type="button"
                 data-testid="nav-promos-desktop"
                 onClick={() => handleNavClick('produtos', 'promocoes')}
@@ -121,6 +145,12 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
                 className="hover:text-yellow-400 transition-colors cursor-pointer py-2 border-b-2 border-transparent hover:border-yellow-400 text-yellow-400"
               >
                 Marcas
+=======
+                onClick={() => handleNavClick('marcas')}
+                className="hover:text-yellow-400 transition-colors cursor-pointer py-2 border-b-2 border-transparent hover:border-yellow-400 text-yellow-400"
+              >
+                Marcas (DLZ & Mioche)
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
               </button>
               <button
                 onClick={() => handleNavClick('depoimentos')}
@@ -136,6 +166,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
               </button>
             </nav>
 
+<<<<<<< HEAD
             {/* Right Action Icons: Admin Button, WhatsApp, Bag, Hamburger */}
             <div className="flex items-center gap-2 sm:gap-3">
               {/* Painel Administrativo CTA Button */}
@@ -150,6 +181,10 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
                 <span>Painel Admin</span>
               </button>
 
+=======
+            {/* Right Action Icons: WhatsApp Icon Button, Bag, and Hamburger */}
+            <div className="flex items-center gap-2 sm:gap-3">
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
               {/* Direct WhatsApp Call Icon Button */}
               <a
                 href={buildGeneralWhatsAppLink('Olá! Vim pelo site da CVT STORE e quero atendimento no WhatsApp!')}
@@ -160,23 +195,34 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
                 aria-label="Chamar no WhatsApp"
               >
                 <MessageCircle className="w-5 h-5 fill-black shrink-0" />
+<<<<<<< HEAD
                 <span className="hidden lg:inline">WhatsApp</span>
+=======
+                <span className="hidden sm:inline">WhatsApp</span>
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
               </a>
 
               {/* Shopping Bag */}
               <button
                 onClick={onOpenCart}
+<<<<<<< HEAD
                 data-testid="open-cart-btn"
+=======
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
                 className="relative min-w-[44px] min-h-[44px] flex items-center justify-center text-zinc-300 hover:text-white bg-zinc-900 hover:bg-zinc-800 rounded-lg transition-all cursor-pointer border border-zinc-800 p-2.5"
                 title="Sacola de Compras"
                 aria-label="Ver Sacola"
               >
                 <ShoppingBag className="w-5 h-5" />
                 {cartCount > 0 && (
+<<<<<<< HEAD
                   <span 
                     data-testid="cart-badge-count"
                     className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-lg font-athletic"
                   >
+=======
+                  <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-lg font-athletic">
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
                     {cartCount}
                   </span>
                 )}
@@ -217,6 +263,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
               </button>
             </div>
 
+<<<<<<< HEAD
             {/* Admin Quick Link in Mobile Drawer */}
             <div className="p-4 bg-zinc-900 border-b border-zinc-800">
               <button
@@ -230,6 +277,8 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
               </button>
             </div>
 
+=======
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
             {/* WhatsApp Quick CTA in Drawer */}
             <div className="p-4 bg-yellow-400/10 border-b border-yellow-400/20">
               <a
@@ -246,7 +295,11 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
               </p>
             </div>
 
+<<<<<<< HEAD
             {/* Menu Links */}
+=======
+            {/* Menu Links: Início, Produtos, Contato */}
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
             <div className="p-4 space-y-1">
               <p className="text-[11px] uppercase tracking-widest text-zinc-500 font-black font-athletic px-3 mb-2">
                 Navegação
@@ -269,6 +322,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
               </button>
 
               <button
+<<<<<<< HEAD
                 type="button"
                 data-testid="nav-promos-mobile"
                 onClick={() => handleNavClick('produtos', 'promocoes')}
@@ -284,6 +338,8 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
               </button>
 
               <button
+=======
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
                 onClick={() => handleNavClick('marcas')}
                 className="w-full min-h-[48px] flex items-center justify-between px-3.5 py-2.5 rounded-lg text-base font-black uppercase tracking-wider text-yellow-400 bg-yellow-400/5 border border-yellow-400/20 font-athletic text-left transition-colors"
               >
@@ -307,6 +363,42 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart, onSelectC
                 <ChevronRight className="w-4 h-4 text-zinc-600" />
               </button>
             </div>
+<<<<<<< HEAD
+=======
+
+            {/* Categorias Rápidas */}
+            <div className="p-4 border-t border-zinc-800">
+              <p className="text-[11px] uppercase tracking-widest text-zinc-500 font-black font-athletic px-3 mb-3">
+                Categorias
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { id: 'camisas', label: 'Camisas' },
+                  { id: 'polos', label: 'Polos' },
+                  { id: 'calcas', label: 'Calças' },
+                  { id: 'bermudas', label: 'Bermudas' },
+                  { id: 'bones', label: 'Bonés & Acessórios' },
+                ].map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleNavClick('produtos', cat.id)}
+                    className="min-h-[44px] bg-zinc-900 hover:bg-zinc-800 active:bg-yellow-400 active:text-black text-zinc-200 text-xs font-black py-2.5 px-3 uppercase tracking-wider hover:text-yellow-400 transition-colors font-athletic text-left"
+                  >
+                    {cat.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="mt-auto p-4 border-t border-zinc-800 bg-black space-y-2">
+              <div className="flex items-center gap-2 text-xs text-zinc-400">
+                <MapPin className="w-4 h-4 text-yellow-400 shrink-0" />
+                <span>Rua Luciana Paiva de Souza, 392 - Igarassu</span>
+              </div>
+            </div>
+
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
           </div>
         </div>
       )}

@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Search, MessageCircle, Flame, Tag } from 'lucide-react';
 import { Product, CategoryId } from '../types';
 import { CATEGORIES, buildGeneralWhatsAppLink } from '../data/products';
 import { ProductCard } from './ProductCard';
 import { useStore } from '../data/storeContext';
+=======
+import { Search, Sparkles, MessageCircle } from 'lucide-react';
+import { Product, CategoryId } from '../types';
+import { CATEGORIES, PRODUCTS, buildGeneralWhatsAppLink } from '../data/products';
+import { ProductCard } from './ProductCard';
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
 
 interface ProductGridProps {
   selectedCategory: CategoryId;
@@ -18,11 +25,15 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   onAddToCart,
   onQuickView,
 }) => {
+<<<<<<< HEAD
   const { products } = useStore();
+=======
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedBrandFilter, setSelectedBrandFilter] = useState<string>('todas');
 
   // Filter products by category, brand and search
+<<<<<<< HEAD
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
       selectedCategory === 'todas'
@@ -32,6 +43,11 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
         : product.category === selectedCategory;
     const matchesBrand =
       selectedBrandFilter === 'todas' ||
+=======
+  const filteredProducts = PRODUCTS.filter((product) => {
+    const matchesCategory = selectedCategory === 'todas' || product.category === selectedCategory;
+    const matchesBrand = selectedBrandFilter === 'todas' || 
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
       (selectedBrandFilter === 'dlz' && product.brand?.toLowerCase() === 'dlz') ||
       (selectedBrandFilter === 'mioche' && product.brand?.toLowerCase() === 'mioche') ||
       (selectedBrandFilter === 'cvt' && product.brand?.toLowerCase().includes('cvt'));
@@ -68,7 +84,11 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               Vitrine de Produtos
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-zinc-400 mt-1 max-w-xl font-sans">
+<<<<<<< HEAD
               Modelagem refinada e acabamento de alto padrão. Cada peça possui botão direto para pedir no WhatsApp com o tamanho selecionado.
+=======
+              Modelagem atlética e acabamento de alto padrão. Cada peça possui botão direto para pedir no WhatsApp com o tamanho selecionado.
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
             </p>
           </div>
 
@@ -93,6 +113,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Category Navigation Pills */}
         <div className="flex items-center gap-2 overflow-x-auto touch-pan-x pb-3 mb-3 scrollbar-none">
           {CATEGORIES.map((cat) => {
@@ -112,15 +133,34 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               <button
                 key={cat.id}
                 data-testid={`cat-pill-${cat.id}`}
+=======
+        {/* Touch-Friendly Category Navigation Pills (Horizontally scrollable with touch momentum) */}
+        <div className="flex items-center gap-2 overflow-x-auto touch-pan-x pb-3 mb-3 scrollbar-none">
+          {CATEGORIES.map((cat) => {
+            const isSelected = selectedCategory === cat.id;
+            return (
+              <button
+                key={cat.id}
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
                 onClick={() => {
                   onSelectCategory(cat.id);
                   const el = document.getElementById('vitrine-topo');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
+<<<<<<< HEAD
                 className={`min-h-[44px] px-4 sm:px-5 py-2 font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 cursor-pointer font-athletic whitespace-nowrap shrink-0 flex items-center justify-center gap-1.5 rounded-none ${pillClasses}`}
               >
                 {isPromoPill && <Flame className="w-4 h-4 text-yellow-400 fill-current animate-pulse" />}
                 <span>{cat.label}</span>
+=======
+                className={`min-h-[44px] px-4 sm:px-5 py-2 font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 cursor-pointer font-athletic whitespace-nowrap shrink-0 flex items-center justify-center ${
+                  isSelected
+                    ? 'bg-yellow-400 text-black shadow-md'
+                    : 'bg-zinc-900 text-zinc-300 border border-zinc-800 hover:bg-zinc-800 hover:text-white'
+                }`}
+              >
+                {cat.label}
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
               </button>
             );
           })}
@@ -153,6 +193,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
 
         <div id="vitrine-topo" />
 
+<<<<<<< HEAD
         {/* Dynamic Grid: 1 col on mobile, 2 on tablet, 3 on md, 4 on desktop */}
         {selectedCategory !== 'todas' || selectedBrandFilter !== 'todas' || searchQuery ? (
           <div>
@@ -191,11 +232,20 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               </div>
             )}
 
+=======
+        {/* Dynamic Grid: 1 col on mobile, 2 on phablet/small tablet, 3 on md tablet, 4 on desktop */}
+        {selectedCategory !== 'todas' || selectedBrandFilter !== 'todas' || searchQuery ? (
+          <div>
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
             <div className="flex items-center justify-between mb-6 pb-3 border-b border-zinc-800">
               <span className="text-xs sm:text-sm font-semibold text-zinc-300 font-sans">
                 Mostrando <strong className="text-white">{filteredProducts.length}</strong> produtos
                 {selectedCategory !== 'todas' && (
+<<<<<<< HEAD
                   <span className="text-yellow-400 ml-1">em {CATEGORIES.find((c) => c.id === selectedCategory)?.label}</span>
+=======
+                  <span className="text-yellow-400 ml-1">em {CATEGORIES.find(c => c.id === selectedCategory)?.label}</span>
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
                 )}
                 {selectedBrandFilter !== 'todas' && (
                   <span className="text-yellow-400 ml-1">({selectedBrandFilter.toUpperCase()})</span>
@@ -231,7 +281,11 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
                 </a>
               </div>
             ) : (
+<<<<<<< HEAD
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-6">
+=======
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
                 {filteredProducts.map((product) => (
                   <ProductCard
                     key={product.id}
@@ -244,10 +298,17 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
             )}
           </div>
         ) : (
+<<<<<<< HEAD
           /* Structured layout by each required category */
           <div className="space-y-12 sm:space-y-16">
             {categoryGroups.map((group) => {
               const groupProducts = products.filter((p) => p.category === group.id);
+=======
+          /* Structured layout by each required category: Camisas, Polos, Calças, Bermudas, Bonés */
+          <div className="space-y-12 sm:space-y-16">
+            {categoryGroups.map((group) => {
+              const groupProducts = PRODUCTS.filter((p) => p.category === group.id);
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
               if (groupProducts.length === 0) return null;
 
               return (
@@ -275,8 +336,13 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
                     </a>
                   </div>
 
+<<<<<<< HEAD
                   {/* Responsive Grid: 2 cols on mobile, 2 on tablet, 3 on md, 4 on desktop */}
                   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-6">
+=======
+                  {/* Responsive Grid: 1 col on mobile, 2 on tablet, 3 on md, 4 on desktop */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+>>>>>>> 383a3ab05a45484724d157c5c8660ecbfa96dfe7
                     {groupProducts.map((product) => (
                       <ProductCard
                         key={product.id}
